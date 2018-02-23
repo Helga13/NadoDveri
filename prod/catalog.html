@@ -43,7 +43,7 @@
       <a href="mailto:nadodveri.by@mail.ru" class="mail">nadodveri.by@mail.ru</a>
       <span class="working_hours">пн-пт 9.00 - 20.00, сб 10.00 - 15.00</span>
     </div>
-    <a href="#" class="btn call_request"><img src="img/icons/phone_call.png" alt="">Заказать звонок</a>
+    <a href="#" class="btn call_request"><img src="img/icons/phone_call.png" alt="Заказать звонок">Заказать звонок</a>
   </div>
 </div>	
 </header>
@@ -147,20 +147,20 @@
         <div class="filters_block">
           <div class="field">
             <div class="label">Цена (от/до)</div>
-            <input type="text" class="price" value="">
-            &nbsp;<span>-</span>&nbsp;
-            <input type="text" class="price" value="">
+            <label class="price" for="min_price"><input type="text" class="price_input" id="min_price" maxlength="5"></label>
+            <span class="delimiter">-</span>
+            <label class="price" for="max_price"><input type="text" class="price_input" id="max_price" maxlength="5"></label>
           </div>
           <div class="field">
             <div class="label">Материал</div>
-            <select>
+            <select class="js-select">
               <option>Шпон</option>
               <option>Не шпон</option>
             </select>
           </div>
           <div class="field number_field ">
             <div class="label">На странице</div>
-            <select>
+            <select class="js-select">
               <option>100 товаров</option>
               <option>200 товаров</option>
               <option>300 товаров</option>
