@@ -1099,3 +1099,57 @@ main{
     }
   } 
 }
+
+// gallery
+
+.gallery{
+  margin: 8px -15px 0
+}
+
+.grid-item {
+  float: left;
+  width: 33.333%;
+  line-height: 0;
+  padding: 23px 15px 0;
+  img{
+    width: 100%;
+  }
+  &:after{
+    content: '';
+    line-height: 23px;
+    position: absolute;
+    text-align: center;
+    top: 23px;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    background: rgba(247, 253, 97, 0.8) url('../img/icons/search-gallery.svg') center no-repeat;
+    background-size: 31px 38px;
+//    padding-top: 50%;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+  &:before{
+    content: 'Увеличить';
+    position: absolute;
+    top: calc(50% + 60px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity .3s ease-in-out;
+  }
+  &:hover:before,
+  &:focus:before,
+  &:active:before,
+  &:hover:after,
+  &:focus:after,
+  &:active:after{
+    opacity: 1;
+  }
+}
+
+.sl-overlay{
+  background: #222;
+  opacity: .9;
+}

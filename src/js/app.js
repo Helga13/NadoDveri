@@ -73,6 +73,18 @@ $(document).ready(function () {
     }
   });
   
+  // portfolio galereya
+  
+//  $('.gallery').galereya();
+  
+  $('.gallery').masonry({
+    itemSelector: '.grid-item'
+  });
+  
+  var lightbox = $('.gallery a').simpleLightbox({
+    showCounter: false
+  });
+  
 });
 
 // resize input price
@@ -90,4 +102,5 @@ for (var i = 0; input.length > i; i++) {
     this.nextElementSibling.innerHTML = this.value;
     this.style.width = this.nextElementSibling.clientWidth + 'px';
   };
+  
 }

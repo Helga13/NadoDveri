@@ -3,5 +3,7 @@
 //= lib/slick.min.js
 //= lib/maskedinput.js
 //= lib/select2.min.js
+//= lib/masonry.pkgd.min.js
+//= lib/simple-lightbox.min.js
 
 //= app.js
