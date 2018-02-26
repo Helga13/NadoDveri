@@ -77,6 +77,10 @@ $(document).ready(function () {
     slidesToScroll: 3
   });
   
+  $('.product_slider').slick({
+    arrows: true    
+  });
+  
   // tabs
   $('.tabs_block').each(function () {
     $(this).find('.tab').each(function (i) {
