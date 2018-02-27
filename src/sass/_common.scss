@@ -776,7 +776,6 @@ main{
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   padding-top: 48px;
   padding-bottom: 97px;
-  font-size: 0;
   @include clearfix;
 }
 
@@ -1211,12 +1210,54 @@ main{
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  padding: 40px 22px;
+  padding: 40px 0 0;
   margin-bottom: 11px;
+  position: relative;
+  .price {
+    padding: 0 22px 10px;
+    line-height: 31px;
+    span{
+      font-family: 'RobotoBold', $font-stack-helvetica;
+      font-size: 19px;
+    }
+  }
+  .label{
+    font-family: 'RobotoBold', $font-stack-helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 22px;
+  }
+  label{
+    display: block;
+    padding: 3px 7px;
+    box-shadow: inset 0 1px 0 0 rgba(0,0,0,.2);
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    &:hover,
+    &:focus,
+    &:active{
+      background-color: $yellow;
+    }
+  }
+  img{
+    vertical-align: middle;
+    width: 30px;
+    margin-right: 16px;
+  }
+  input[type="radio"]{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+  }
+  input[type="radio"]:checked + label{
+    background-color: $yellow;
+  }
 }
 
 .composition{
   background-color: #fff;
   margin-bottom: 11px;
-  padding: 40px 22px;
+  padding: 25px 22px 6px;
 }
+
