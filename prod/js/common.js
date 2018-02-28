@@ -207,7 +207,7 @@ $(document).ready(function () {
   }
   
   // inputmask
-  $('#call_phone').mask('(99) 999-99-99');
+  $('#call_phone, #popup_phone').mask('(99) 999-99-99');
   
   // select
   
@@ -229,8 +229,6 @@ $(document).ready(function () {
   
   // portfolio galereya
   
-//  $('.gallery').galereya();
-  
   $('.gallery').masonry({
     itemSelector: '.grid-item'
   });
@@ -239,15 +237,35 @@ $(document).ready(function () {
     showCounter: false
   });
   
-  // custom scroll
-  
   // scrollbar
-	$('.js-scroll').niceScroll({
-	  cursorcolor: '#dddddd'
-	  , cursoropacitymin: '1'
-	  , cursorborderradius: '10px'
-	  , cursorwidth: '6px'
-	});
+  $('.js-scroll').niceScroll({
+    cursorcolor: '#dddddd'
+    , cursoropacitymin: '1'
+    , cursorborderradius: '10px'
+    , cursorwidth: '6px'
+  });
+  
+  // popup
+  
+  $('.js-popup').click(function (e) {
+    e.preventDefault();
+    $('#popup_form').fadeIn(300);
+    $('body').css('overflow', 'hidden');
+  });
+  $('.popup_overlay').click(function (e) {
+    $(this).fadeOut(100);
+    $('body').css('overflow', 'auto');
+  });
+  $('.popup_close').click(function (e) {
+    e.preventDefault();
+    $(this).parents('.popup_overlay').fadeOut(100);
+    $('body').css('overflow', 'auto');
+  });
+  $('.popup_content').click(function (e) {
+    e.stopPropagation();
+  });
+  
+  
   
   
 });
