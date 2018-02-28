@@ -89,6 +89,17 @@ $(document).ready(function () {
     showCounter: false
   });
   
+  // custom scroll
+  
+  // scrollbar
+	$('.js-scroll').niceScroll({
+	  cursorcolor: '#dddddd'
+	  , cursoropacitymin: '1'
+	  , cursorborderradius: '10px'
+	  , cursorwidth: '6px'
+	});
+  
+  
 });
 
 // resize input price

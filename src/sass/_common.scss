@@ -1087,7 +1087,7 @@ main{
   float: right;
   background-color: $yellow;
   margin-top: 31px;
-  padding: 34px 23px;
+  padding: 34px 23px 42px;
   .field{
     padding: 10px 0 2px;
   }
@@ -1261,3 +1261,134 @@ main{
   padding: 25px 22px 6px;
 }
 
+.review_block{
+  display: inline-block;
+  margin-top: 21px;
+  width: calc(100% - 320px);
+}
+
+.review_item{
+  background-color: #fff;
+  padding: 24px 22px 26px;;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.review_name{
+  font-family: 'RobotoBold', $font-stack-helvetica;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.025em;
+  font-weight: bold;
+  float: left;
+  margin-right: 10px;
+}
+
+.review_date{
+  color: #999;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.025em;
+  display: inline-block;
+}
+
+.review_rate{
+  font-size: 0;
+  float: right;
+  margin-left: 10px;
+  margin-top: 15px;
+  .rate{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background: url('../img/icons/rate.png') center no-repeat;
+  }
+  .full{
+    background: url('../img/icons/rate_full.png') center no-repeat;
+  }
+}
+
+.review_content{
+  clear: both;
+  line-height: 23px;
+  padding-top: 6px;
+}
+
+.review_form {
+  width: 290px;
+  margin-left: 30px;
+  float: right;
+  background-color: #fff;
+  margin-top: 31px;
+  padding: 34px 23px 42px;
+  .field{
+    padding: 10px 0 2px;
+  }
+  input,
+  textarea{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px 14px;
+    box-shadow: none;
+  }
+  textarea{
+    resize: none;
+    border: none;
+    height: 112px;
+    padding: 7px 11px;
+  }
+  .message_wrap{
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 3px;
+  }
+  label{
+    color: #999;
+  }
+  .btn{
+    float: right;
+    width: 142px;
+    margin-top: 21px;
+    img{
+      position: relative;
+      top: 4px;
+      margin-right: 9px;
+    }
+  } 
+}
+
+.dynamic_rate{
+  position: relative;
+  float: left;
+  padding-bottom: 3px;
+  input[type="radio"]{
+    width: auto;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+  }
+  .rate{
+    display: inline-block;
+    width: 25px;
+    height: 15px;
+    padding: 0 5px;
+    float: right;
+    cursor: pointer;
+    background: url('../img/icons/rate.png') center no-repeat;
+    background-size: 15px;
+  }
+//  .full{
+//    background: url('../img/icons/rate_full.png') center no-repeat;
+//  }
+  label:hover,
+  label:focus,
+  label:active,
+  label:hover~label,
+  label:focus~label,
+  label:active~label,
+  input:checked~label{
+    background: url('../img/icons/rate_full.png') center no-repeat;
+  }
+}

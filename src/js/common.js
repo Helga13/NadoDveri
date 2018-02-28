@@ -5,5 +5,6 @@
 //= lib/select2.min.js
 //= lib/masonry.pkgd.min.js
 //= lib/simple-lightbox.min.js
+//= lib/jquery.nicescroll.min.js
 
 //= app.js

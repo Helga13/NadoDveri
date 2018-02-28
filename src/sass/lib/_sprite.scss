@@ -10,6 +10,17 @@
   At the bottom of this section, we provide information about the spritesheet itself
   $spritesheet: width height image $spritesheet-sprites
   */
+$paper-plane-name: 'paper-plane'
+$paper-plane-x: 18px
+$paper-plane-y: 0px
+$paper-plane-offset-x: -18px
+$paper-plane-offset-y: 0px
+$paper-plane-width: 18px
+$paper-plane-height: 16px
+$paper-plane-total-width: 51px
+$paper-plane-total-height: 33px
+$paper-plane-image: 'sprite.png'
+$paper-plane: 18px 0px -18px 0px 18px 16px 51px 33px 'sprite.png' 'paper-plane'
 $phone_call-name: 'phone_call'
 $phone_call-x: 0px
 $phone_call-y: 0px
@@ -17,26 +28,48 @@ $phone_call-offset-x: 0px
 $phone_call-offset-y: 0px
 $phone_call-width: 18px
 $phone_call-height: 18px
-$phone_call-total-width: 33px
-$phone_call-total-height: 18px
+$phone_call-total-width: 51px
+$phone_call-total-height: 33px
 $phone_call-image: 'sprite.png'
-$phone_call: 0px 0px 0px 0px 18px 18px 33px 18px 'sprite.png' 'phone_call'
+$phone_call: 0px 0px 0px 0px 18px 18px 51px 33px 'sprite.png' 'phone_call'
+$rate-name: 'rate'
+$rate-x: 0px
+$rate-y: 18px
+$rate-offset-x: 0px
+$rate-offset-y: -18px
+$rate-width: 15px
+$rate-height: 15px
+$rate-total-width: 51px
+$rate-total-height: 33px
+$rate-image: 'sprite.png'
+$rate: 0px 18px 0px -18px 15px 15px 51px 33px 'sprite.png' 'rate'
+$rate_full-name: 'rate_full'
+$rate_full-x: 15px
+$rate_full-y: 18px
+$rate_full-offset-x: -15px
+$rate_full-offset-y: -18px
+$rate_full-width: 15px
+$rate_full-height: 15px
+$rate_full-total-width: 51px
+$rate_full-total-height: 33px
+$rate_full-image: 'sprite.png'
+$rate_full: 15px 18px -15px -18px 15px 15px 51px 33px 'sprite.png' 'rate_full'
 $star-name: 'star'
-$star-x: 18px
+$star-x: 36px
 $star-y: 0px
-$star-offset-x: -18px
+$star-offset-x: -36px
 $star-offset-y: 0px
 $star-width: 15px
 $star-height: 15px
-$star-total-width: 33px
-$star-total-height: 18px
+$star-total-width: 51px
+$star-total-height: 33px
 $star-image: 'sprite.png'
-$star: 18px 0px -18px 0px 15px 15px 33px 18px 'sprite.png' 'star'
-$spritesheet-width: 33px
-$spritesheet-height: 18px
+$star: 36px 0px -36px 0px 15px 15px 51px 33px 'sprite.png' 'star'
+$spritesheet-width: 51px
+$spritesheet-height: 33px
 $spritesheet-image: 'sprite.png'
-$spritesheet-sprites: $phone_call $star
-$spritesheet: 33px 18px 'sprite.png' $spritesheet-sprites
+$spritesheet-sprites: $paper-plane $phone_call $rate $rate_full $star
+$spritesheet: 51px 33px 'sprite.png' $spritesheet-sprites
 
 /*
   The provided mixins are intended to be used with the array-like variables
