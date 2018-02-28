@@ -172,7 +172,23 @@ $(document).ready(function () {
 //    autoplay: true,
 //    autoplaySpeed: 4000,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [
+    {
+      breakpoint: 1281,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 482,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    }
+  ]
   });
   
   $('.product_slider').slick({

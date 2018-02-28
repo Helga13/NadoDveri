@@ -1248,9 +1248,8 @@ main{
 }
 
 .product_slider{
-  width: 65.59%;
+  width: calc(100% - 320px);
   float: left;
-  margin-right: 30px;
   text-align: center;
   background-color: #fff;
 }
@@ -1270,7 +1269,8 @@ main{
 
 .product_description{
   display: inline-block;
-  width: calc(34.41% - 30px);
+  width: 290px;
+  margin-left: 30px;
 }
 
 .main_description{

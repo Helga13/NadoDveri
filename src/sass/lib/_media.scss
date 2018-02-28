@@ -1,14 +1,39 @@
 @media only screen and (max-width : 1280px) {
   
-  
+  .wrap{
+    max-width: 1080px;
+  }
+  .doors{
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .door_item{
+    padding-left: 8px;
+    padding-right: 8px;
+    min-width: auto;
+  }
+  .doors_slider .slick-prev{
+    left: 8px;
+  }
+  .doors_slider .slick-next{
+    right: 8px;
+  }
+  .filters_block .field{
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .call_request{
+    margin-top: 16px;
+    margin-bottom: 6px;
+  }
   
 }
 
 @media only screen and (max-width : 1080px) {
-
-}
-
-@media only screen and (max-width : 1023px) {
+  
+  .wrap{
+    max-width: 992px;
+  }
 
 }
 
