@@ -311,10 +311,16 @@ table{
     padding: 12px;
     line-height: 0;
     margin-right: 18px;
+    float: left;
   }
 }
 
 // header 
+
+#hamburger{
+  display: none;
+  visibility: hidden;
+}
 
 .header_top{
   background-color: #222;
@@ -406,6 +412,7 @@ nav{
   .working_hours{
     padding: 6px 0 6px 28px;
     margin-left: 23px;
+    display: inline-block;
   }
   .phone{
     background: url('../img/icons/telephone.svg') left center no-repeat;
@@ -459,6 +466,11 @@ aside{
   display: inline-block;
   vertical-align: top;
   float: left;
+}
+
+.catalog_toggle{
+  display: none;
+  visibility: hidden;
 }
 
 .menu_cat{
@@ -701,6 +713,7 @@ aside{
     display: inline-block;
     font-size: 14px;
     text-align: center;
+    vertical-align: top;
   }
   a{
     display: inline-block;
@@ -899,7 +912,7 @@ main{
 .door_item{
   padding: 13px 15px;
   width: 33.333%;
-  min-width: 260px;
+//  min-width: 260px;
   float: left;
 }
 
@@ -1331,10 +1344,7 @@ main{
 .review_block{
   display: inline-block;
   margin-top: 21px;
-  width: calc(100% - 320px);
-  .pagination_block{
-    margin-top: 26px;
-  } 
+  width: calc(100% - 320px); 
 }
 
 .review_item{
@@ -1387,10 +1397,9 @@ main{
 
 .review_form {
   width: 290px;
-  margin-left: 30px;
   float: right;
   background-color: #fff;
-  margin-top: 31px;
+  margin:  31px 0 31px 30px;
   padding: 34px 23px 42px;
   .field{
     padding: 10px 0 2px;
@@ -1426,7 +1435,11 @@ main{
       top: 4px;
       margin-right: 9px;
     }
-  } 
+  }
+  & + .pagination_block{
+    margin-right: 320px;
+    clear: both;
+  }
 }
 
 .dynamic_rate{

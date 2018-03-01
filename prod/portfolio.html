@@ -15,6 +15,13 @@
 <header>
 <div class="header_top">
   <div class="wrap">
+    <div id="hamburger" class="">
+      <span class="circle">
+        <span class="line first"></span>
+        <span class="line second"></span>
+        <span class="line third"></span>
+      </span>
+    </div>
     <nav>
       <ul>
         <li><a href="#">Каталог</a></li>
@@ -29,8 +36,8 @@
     </nav>
     <div class="add_header">
       <a href="#" class="search">Поиск</a>
-      <a href="#" class="viewed">Просмотренное (23)</a>
-      <a href="#" class="favorites">Любимое (57)</a>
+      <a href="#" class="viewed">Просмотренное <span>(23)</span></a>
+      <a href="#" class="favorites">Любимое <span>(57)</span></a>
     </div>
   </div>
 </div>
@@ -43,17 +50,17 @@
       <a href="mailto:nadodveri.by@mail.ru" class="mail">nadodveri.by@mail.ru</a>
       <span class="working_hours">пн-пт 9.00 - 20.00, сб 10.00 - 15.00</span>
     </div>
-    <a href="#" class="btn call_request"><img src="img/icons/phone_call.png" alt="Заказать звонок">Заказать звонок</a>
+    <a href="#" class="btn call_request js-popup"><img src="img/icons/phone_call.png" alt="Заказать звонок">Заказать звонок</a>
   </div>
 </div>	
 </header>
 <main>
   <div class="wrap">
     <ul class="breadcrumbs">
-      <li><a href="#" class="btn btn_back"><img src="img/icons/arrow_back_to-category.svg" alt="Назад"></a></li>
-      <li>Портфолио</li>
+      <li><a href="#" class="btn btn_back"><img src="img/icons/arrow_back_to-category.svg" alt="Назад"></a><span class="current">Портфолио</span></li>
     </ul>
     <aside>
+          <div class="catalog_toggle">Каталог дверей</div>
           <ul class="menu_cat">
             <li>
               <a href="#" class="parent js-toggle_menu is-open">Межкомнатные двери</a>

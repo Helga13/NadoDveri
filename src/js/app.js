@@ -27,15 +27,30 @@ $(document).ready(function () {
     {
       breakpoint: 1281,
       settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 993,
+      settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
       }
     },
     {
-      breakpoint: 482,
+      breakpoint: 768,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true
       }
     }
   ]
@@ -117,6 +132,10 @@ $(document).ready(function () {
     e.preventDefault();
     $('#popup_form').fadeIn(300);
     $('body').css('overflow', 'hidden');
+    if($(this).hasClass('call_request')){
+      $('.popup_overlay .h2').text('Заказать звонок');
+      $('.popup_overlay .btn').text('Заказать звонок');
+    }
   });
   $('.popup_overlay').click(function (e) {
     $(this).fadeOut(100);
@@ -131,7 +150,18 @@ $(document).ready(function () {
     e.stopPropagation();
   });
   
+  // burger
   
+  $('#hamburger').on('click', function(){
+    $(this).toggleClass('is-open').next().slideToggle(300);
+    $('body').toggleClass('hidden');
+  });
+  
+  // aside toggle
+  
+  $('.catalog_toggle').on('click', function(){
+    $(this).toggleClass('is-open').next().slideToggle(300);
+  });
   
   
 });
