@@ -3,9 +3,8 @@ $(document).ready(function () {
   'use strict'
   
   // menu catalog
-  $('.js-toggle_menu').on('click', function(e){
-    e.preventDefault();
-    $(this).addClass('is-open').next().slideDown(300).parent('li').siblings().find('.is-open').removeClass('is-open').next().slideUp(300);
+  $('.js-toggle_menu + span').on('click', function(){
+    $(this).prev().addClass('is-open').next().next().slideDown(300).parent('li').siblings().find('.is-open').removeClass('is-open').next().next().slideUp(300);
   });
   
   // sliders
@@ -19,8 +18,6 @@ $(document).ready(function () {
   $('.doors_slider').slick({
     arrows: true,
     infinite: false,
-//    autoplay: true,
-//    autoplaySpeed: 4000,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [

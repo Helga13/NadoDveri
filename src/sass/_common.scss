@@ -466,6 +466,9 @@ aside{
   display: inline-block;
   vertical-align: top;
   float: left;
+  li{
+    position: relative;
+  }
 }
 
 .catalog_toggle{
@@ -501,20 +504,23 @@ aside{
     box-shadow: none;
   }
   .parent{
-    position: relative;
-    &:after{
-      content: '';
+//    position: relative;
+    & + span{
+//      content: '';
+      display: inline-block;
       position: absolute;
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       background: url('../img/icons/plus_liner.svg') center no-repeat;
       background-size: 14px;
-      top: 26px;
-      right: 20px;
+      padding: 2px;
+      cursor: pointer;
+      top: 24px;
+      right: 18px;
       transition: transform .3s ease-in-out;
     }
     &.is-open{
-      &:after{
+      & + span{
         transform: rotate(45deg);
       }
     }
@@ -536,8 +542,8 @@ aside{
     }
   }
   .parent{
-    &:after{
-      top: 14px;
+    & + span{
+      top: 12px;
     }
   }
 }
@@ -973,6 +979,20 @@ main{
     letter-spacing: 0.025em;
     font-weight: bold;
   }
+  .price_discount{
+    .price{
+      color: $yellow;
+      margin-right: 6px;
+    }
+  }
+  .old_price{
+    text-decoration: line-through;
+    color: #fff;
+    opacity: .7;
+    font-family: 'FiraSansLight', $font-stack-helvetica;
+    font-size: 14px;
+    line-height: 31px;
+  }
   .view{
     float: right;
     width: 18px;
@@ -1060,7 +1080,8 @@ main{
   display: block;
   overflow: hidden;
   text-align: center;
-  height: 206px;
+//  height: 206px;
+  padding-top: 21.685%;
   &:after{
     content: 'Подробнее';
     line-height: 23px;
