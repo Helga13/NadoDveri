@@ -1268,7 +1268,7 @@ main{
 }
 
 .product_page{
-  .text_block{
+  & +.text_block{
     margin-bottom: 60px;
   }
   .tabs_slider{
@@ -1286,6 +1286,11 @@ main{
   float: left;
   text-align: center;
   background-color: #fff;
+  height: 0;
+  overflow: hidden;
+  &.is-active{
+    height: 100%;
+  }
 }
 
 .product_slider_item {
@@ -1320,6 +1325,18 @@ main{
     span{
       font-family: 'RobotoBold', $font-stack-helvetica;
       font-size: 19px;
+    }
+    .price_discount{
+      color: $yellow;
+    }
+    .old_price{
+      text-decoration: line-through;
+      color: #555;
+      opacity: .7;
+      font-family: FiraSansLight,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 14px;
+      line-height: 31px;
+      padding-right: 4px;
     }
   }
   .label{

@@ -209,6 +209,15 @@ $(document).ready(function () {
     arrows: true    
   });
   
+  $('.main_description label').on('click', function(){
+    var checked = $(this).attr('for');
+    var checkedClass = '' + checked;
+//    console.log(checked);
+//    console.log(checkedClass);
+    $('.product_slider').removeClass('is-active');
+    $('.product_slider.' + checkedClass + '').addClass('is-active');
+  });
+  
   // tabs
   $('.tabs_block').each(function () {
     $(this).find('.tab').each(function (i) {
